@@ -1,5 +1,5 @@
-name: Build APK
-on: [push]
+name: Final Build
+on: [push, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,14 +10,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: 8.4 # إصدار متوافق ومستقر
       - name: Build APK
-        run: gradle assembleDebug --stacktrace
+        # نستخدم gradle مباشرة لتجنب مشاكل الـ wrapper
+        run: gradle assembleDebug --no-daemon
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: my-app-apk
+          name: sanad-nfc-final
           path: app/build/outputs/apk/debug/*.apk
