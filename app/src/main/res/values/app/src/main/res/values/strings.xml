@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Sanad NFC</string>
-    <string name="nfc_scan_hint">Tap to Simulate NFC</string>
-    <string name="scanning">Scanning…</string>
-    <string name="no_docs">No documents yet</string>
-    <string name="emergency_mode">Emergency Mode</string>
-    <string name="lang_toggle">عربي</string>
-    <string name="id_number">ID: %s</string>
-    <string name="blood_type_age">Blood: %1$s | Age: %2$d</string>
+    <string name="lang_toggle">English</string>
+    <string name="nfc_scan_hint">قرب الهاتف من البطاقة</string>
+    <string name="blood_type_age">زمرة الدم / العمر</string>
+    <string name="emergency_mode">وضع الطوارئ</string>
+    <string name="id_number">الرقم الوطني</string>
+    <string name="no_docs">لا يوجد وثائق حالياً</string>
+    <string name="scanning">جاري المسح...</string>
 </resources>
