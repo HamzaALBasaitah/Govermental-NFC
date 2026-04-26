@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">سند NFC</string>
+    <string name="nfc_scan_hint">انقر لمحاكاة NFC</string>
+    <string name="scanning">جاري المسح…</string>
+    <string name="no_docs">لا توجد وثائق</string>
+    <string name="emergency_mode">وضع الطوارئ</string>
+    <string name="lang_toggle">English</string>
+    <string name="id_number">الهوية: %s</string>
+    <string name="blood_type_age">الدم: %1$s | العمر: %2$d</string>
+</resources>
