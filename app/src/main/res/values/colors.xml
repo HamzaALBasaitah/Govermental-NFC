@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#0a6350</color>
-    <color name="primary_dark">#074838</color>
-    <color name="primary_light">#0d7d65</color>
-    <color name="emergency">#b71c1c</color>
-    <color name="gold">#c4933a</color>
-    <color name="bg">#f2f5f4</color>
+    <color name="colorPrimary">#0a6350</color>
+    <color name="colorPrimaryDark">#074838</color>
+    <color name="colorAccent">#c4933a</color>
     <color name="white">#ffffff</color>
-    <color name="text_primary">#1a1f1e</color>
+    <color name="black">#000000</color>
 </resources>
