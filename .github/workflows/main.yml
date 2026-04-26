@@ -1,4 +1,4 @@
-name: Final Force Build
+name: Final APK Build
 on: [push, workflow_dispatch]
 jobs:
   build:
@@ -10,11 +10,15 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 8.4 # فرض النسخة المستقرة
       - name: Build APK
-        # استخدمنا --no-daemon لتقليل استهلاك الذاكرة وضمان عدم التوقف
+        # استخدمنا assembleDebug مباشرة
         run: gradle assembleDebug --no-daemon
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: sanad-nfc-apk
+          name: sanad-nfc-app
           path: app/build/outputs/apk/debug/*.apk
