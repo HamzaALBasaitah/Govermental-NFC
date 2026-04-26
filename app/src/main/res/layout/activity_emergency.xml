@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#f2f5f4" android:gravity="center" android:orientation="vertical" android:padding="24dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/emergency_mode" android:background="#b71c1c" android:textColor="#ffffff" android:padding="8dp" />
+    <LinearLayout android:id="@+id/emergencyNfcZone" android:layout_width="match_parent" android:layout_height="160dp" android:gravity="center" android:background="#FAFCFB">
+        <TextView android:id="@+id/emergencyNfcText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tap for scan" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/emCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+        <TextView android:id="@+id/emName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
+        <TextView android:id="@+id/emBlood" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#b71c1c" />
+    </LinearLayout>
+    <Button android:id="@+id/closeEmergencyBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Close" />
+</LinearLayout>
