@@ -6,7 +6,7 @@ plugins {
 android {
     namespace 'com.sanad.nfc'
     compileSdk 34
-
+    
     defaultConfig {
         applicationId "com.sanad.nfc"
         minSdk 24
@@ -14,7 +14,7 @@ android {
         versionCode 1
         versionName "1.0"
     }
-
+    // تأكد من وجود هذا البلوك ليتوافق مع JDK 17
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
@@ -22,11 +22,4 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
-}
-
-dependencies {
-    implementation 'androidx.core:core-ktx:1.12.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.11.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }
