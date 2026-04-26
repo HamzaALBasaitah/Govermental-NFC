@@ -1,4 +1,4 @@
-name: Final Build
+name: Emergency Build
 on: [push, workflow_dispatch]
 jobs:
   build:
@@ -10,14 +10,13 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: 8.5
-      - name: Build APK
-        run: gradle assembleDebug
+      - name: Build with Gradle
+        # أضفنا --no-daemon و --stacktrace لكشف الخطأ بدقة وتجاوز مشاكل الذاكرة
+        run: |
+          chmod +x gradlew || true
+          gradle assembleDebug --no-daemon --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: app-release-apk
+          name: governmental-nfc-apk
           path: app/build/outputs/apk/debug/*.apk
